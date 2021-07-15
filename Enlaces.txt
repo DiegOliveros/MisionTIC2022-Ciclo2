@@ -1,0 +1,12 @@
+[1] https://docs.oracle.com/javase/tutorial/
+[MoodleVPL] https://lms.misiontic2022udea.com/login
+[Recursos] https://github.com/LuisaRestrepo/MisionTIC2022-Ciclo2
+[2] https://nbviewer.jupyter.org/
+[3] https://rise.readthedocs.io/en/stable/installation.html 
+[4] https://jupyter.org/try
+[5] https://desktop.github.com/
+[6] https://www.jetbrains.com/es-es/pycharm/download/#section=windows 
+[7] https://notepad-plus-plus.org/downloads/ 
+[8] https://colab.research.google.com/
+[9] https://www.w3schools.com/
+
