@@ -7,7 +7,7 @@ package EjerClassCiclo2;
 
 /**
  *
- * @author diego
+ * @author Diego Iván Oliveros Acosta
  */
 public class Challenge5 {
     

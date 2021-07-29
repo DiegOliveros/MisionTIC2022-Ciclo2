@@ -6,8 +6,8 @@
 package EjerClassCiclo2;
 
 /**
- *
- * @author diego
+ * 28/07/2021
+ * @author Diego Iván Oliveros Acosta
  */
 public class Figura {
 

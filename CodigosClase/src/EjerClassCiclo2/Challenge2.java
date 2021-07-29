@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author diego
+ * @author Diego Iván Oliveros Acosta
  */
 public class Challenge2 {
 
