@@ -30,9 +30,9 @@ public class InterGraf extends JFrame {
 //        miVentana.setBounds(x, y, 500, 500);
         miVentana.setMinimumSize(new Dimension(200, 200));
         miVentana.setResizable(true);
-        miVentana.setVisible(true); //debe ir al final
         miVentana.setDefaultCloseOperation(EXIT_ON_CLOSE);
         miVentana.getContentPane().setBackground(Color.BLUE);
+        
         JPanel panel = new JPanel();
         panel.setBackground(Color.yellow);
         miVentana.add(panel);
@@ -43,21 +43,21 @@ public class InterGraf extends JFrame {
         etiqueta1.setOpaque(true);
         etiqueta2.setOpaque(true);
 
-        etiqueta1.setBackground(Color.BLACK);
+        etiqueta1.setBackground(new java.awt.Color(207, 27, 177));
         etiqueta2.setBackground(Color.CYAN);
-        etiqueta1.setBounds(20, 20, 100, 100);
-        etiqueta2.setBounds(10, 10, 50, 500);
+        etiqueta1.setBounds(20, 20, 10, 10);
+        etiqueta2.setBounds(10, 10, 20, 200);
         etiqueta1.setForeground(Color.white);
         etiqueta2.setFont(new Font("verdana", Font.PLAIN, 50));
         etiqueta1.setFont(new Font("Georgia", Font.BOLD, 100));
 
         ImageIcon imagen1 = new ImageIcon("..\\CodigosClase\\src\\Imagenes\\imagenpng.png"); //desde otra ubicación  
         JLabel etiqueta3 = new JLabel(imagen1); //unIcono.png
-
+            
         ImageIcon sinEscalar = new ImageIcon("C:\\Users\\diego\\Documents\\GitHub\\MisionTIC2022-Ciclo2\\CodigosClase\\src\\Imagenes\\star0.gif"); //La url completa * no recomendado
         JLabel etiqueta4 = new JLabel(sinEscalar);
         //Un escalado de 10 10 casi no se percibe. 
-        ImageIcon imageIcoEscalada = new ImageIcon(sinEscalar.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH));
+        ImageIcon imageIcoEscalada = new ImageIcon(sinEscalar.getImage().getScaledInstance(10, 10, Image.SCALE_SMOOTH));
         JLabel etiqueta5 = new JLabel(imageIcoEscalada);
 
         JLabel etiqueta6 = new JLabel("Etiqueta 6 con nombre", new ImageIcon("..\\CodigosClase\\src\\Imagenes\\a.jpg"), JLabel.CENTER);
@@ -71,6 +71,7 @@ public class InterGraf extends JFrame {
         panel.add(etiqueta5); //escalada gif 
         panel.add(etiqueta6); //sin escalar jpg otra carpeta
         panel.add(etiqueta7); //sin escalar ppg local 
+        miVentana.setVisible(true); //debe ir al final
     }
 
 }
