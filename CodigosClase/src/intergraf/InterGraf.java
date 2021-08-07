@@ -56,7 +56,7 @@ public class InterGraf extends JFrame {
 
         ImageIcon sinEscalar = new ImageIcon("C:\\Users\\diego\\Documents\\GitHub\\MisionTIC2022-Ciclo2\\CodigosClase\\src\\Imagenes\\star0.gif"); //La url completa * no recomendado
         JLabel etiqueta4 = new JLabel(sinEscalar);
-        //Un escalado de 10 10 casi no se persibe. 
+        //Un escalado de 10 10 casi no se percibe. 
         ImageIcon imageIcoEscalada = new ImageIcon(sinEscalar.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH));
         JLabel etiqueta5 = new JLabel(imageIcoEscalada);
 
