@@ -51,18 +51,18 @@ public class InterGraf extends JFrame {
         etiqueta2.setFont(new Font("verdana", Font.PLAIN, 50));
         etiqueta1.setFont(new Font("Georgia", Font.BOLD, 100));
 
-        ImageIcon imagen1 = new ImageIcon("..\\InterGraf\\src\\Imagenes\\imagenpng.png"); //desde otra ubicación  
+        ImageIcon imagen1 = new ImageIcon("..\\CodigosClase\\src\\Imagenes\\imagenpng.png"); //desde otra ubicación  
         JLabel etiqueta3 = new JLabel(imagen1); //unIcono.png
 
-        ImageIcon sinEscalar = new ImageIcon("C:\\Users\\diego\\Documents\\NetBeansProjects\\InterGraf\\src\\Imagenes\\star0.gif"); //La url completa * no recomendado
+        ImageIcon sinEscalar = new ImageIcon("C:\\Users\\diego\\Documents\\GitHub\\MisionTIC2022-Ciclo2\\CodigosClase\\src\\Imagenes\\star0.gif"); //La url completa * no recomendado
         JLabel etiqueta4 = new JLabel(sinEscalar);
         //Un escalado de 10 10 casi no se persibe. 
         ImageIcon imageIcoEscalada = new ImageIcon(sinEscalar.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH));
         JLabel etiqueta5 = new JLabel(imageIcoEscalada);
 
-        JLabel etiqueta6 = new JLabel("Etiqueta 6 con nombre", new ImageIcon("..\\InterGraf\\src\\Imagenes\\a.jpg"), JLabel.CENTER);
+        JLabel etiqueta6 = new JLabel("Etiqueta 6 con nombre", new ImageIcon("..\\CodigosClase\\src\\Imagenes\\a.jpg"), JLabel.CENTER);
 
-        JLabel etiqueta7 = new JLabel("Etiqueta 7 con nombre", new ImageIcon("..\\InterGraf\\src\\intergraf\\download.png"), JLabel.CENTER);
+        JLabel etiqueta7 = new JLabel("Etiqueta 7 con nombre", new ImageIcon("..\\CodigosClase\\src\\intergraf\\download.png"), JLabel.CENTER);
 
         panel.add(etiqueta1); //texto 1
         panel.add(etiqueta2); //texto 2
