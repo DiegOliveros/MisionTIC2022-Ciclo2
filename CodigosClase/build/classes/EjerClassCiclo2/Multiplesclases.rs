@@ -1,4 +1,0 @@
-EjerClassCiclo2.Z
-EjerClassCiclo2.Multiplesclases
-EjerClassCiclo2.Y
-EjerClassCiclo2.X
