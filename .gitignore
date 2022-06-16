@@ -6,7 +6,8 @@
 
 # BlueJ files
 *.ctxt
-.txt
+*.txt
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
@@ -21,6 +22,7 @@
 
 *.yml
 *.netbeans_automatic_build
+
 # folder
 .github
 /.git
