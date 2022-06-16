@@ -20,7 +20,7 @@
 *.rar
 
 *.yml
-
+*.netbeans_automatic_build
 # folder
 .github
 /.git
