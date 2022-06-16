@@ -22,9 +22,8 @@
 
 
 # Folders
-CodigosClase/*.xml
-/Desafios/Interfaces Challenges.docx  
-Enlaces.txt
+
+Desafios/Interfaces Challenges.docx  
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
