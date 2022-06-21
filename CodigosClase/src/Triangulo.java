@@ -5,7 +5,7 @@ import java.util.Scanner;
  *
  * @author ITOS
  */
-public class NewClass {
+public class Triangulo {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
