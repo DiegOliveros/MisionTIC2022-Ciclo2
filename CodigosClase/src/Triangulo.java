@@ -10,11 +10,11 @@ public class Triangulo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double a, b, c, p, sp;
-        System.out.print("Introduzca la lngitud del primer lado");
+        System.out.print("Introduzca la longitud del primer lado");
         a=sc.nextDouble();
-        System.out.print("Introduzca la lngitud del segundo lado");
+        System.out.print("Introduzca la longitud del segundo lado");
         b=sc.nextDouble();
-        System.out.print("Introduzca la lngitud del tercer lado");
+        System.out.print("Introduzca la longitud del tercer lado");
         c=sc.nextDouble();
         p=a+b+c;
         sp=p/2;
