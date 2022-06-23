@@ -3,8 +3,8 @@ package semana2;
 import java.util.Scanner;
 
 /**
- *
- * @author ITOS
+ * 23 junio 2022
+ * @author Diego Iván Oliveros Acosta @author ITOS
  */
 public class Scaner1 {
     public static void main(String[] args) {

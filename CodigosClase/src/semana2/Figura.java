@@ -1,8 +1,8 @@
 package semana2;
 
 /**
- *
- * @author ITOS
+ * 23 junio 2022
+ * @author Diego Iván Oliveros Acosta @author ITOS
  */
 public class Figura {
 
