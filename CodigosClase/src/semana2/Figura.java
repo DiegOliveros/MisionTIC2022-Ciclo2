@@ -6,7 +6,7 @@ package semana2;
  */
 public class Figura {
 
-    private float area;
+    public float area;
     private float perimetro;
     private String nombre;
 
@@ -66,6 +66,7 @@ class Run {
     public static void main(String[] args) {
         Triangulo trian = new Triangulo();
         trian.setArea(25);
+       
         System.out.println(trian.getArea());
     }
 }
