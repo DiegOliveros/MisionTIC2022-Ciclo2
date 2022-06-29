@@ -5,7 +5,7 @@ package Semana3;
  * Diego Iván Oliveros Acosta
  * @scalapp.co ITOS 28/06/2022
  */
-public class Circulo extends Figura2 implements Elemento{
+public class Circulo extends Figura implements Elemento{
         float radio;
    
     Circulo (float radio){
@@ -18,5 +18,10 @@ public class Circulo extends Figura2 implements Elemento{
     @Override
     public String color () {
         return "";
+    }
+
+    @Override
+    public float divujar(int x, int y) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
