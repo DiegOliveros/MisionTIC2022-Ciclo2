@@ -10,10 +10,13 @@ public class ClaseArray {
     int [][] matriz_enteros ={{1,2,3,4,5},{10,9,8},{6565,55,88,9}};
     
     public void imprimirArray(int [][] Arreglo){
+        //String a="";
     for(int i =0; i<Arreglo.length;i++){
         //apuntador System.out.println(Arreglo_enteros[i]);
         for(int j=0; j<Arreglo[i].length;j++){
             System.out.print(Arreglo[i][j]+",");
+            //a=a+String.valueOf(Arreglo[i][j]);
+            
         }
         System.out.println();
         
