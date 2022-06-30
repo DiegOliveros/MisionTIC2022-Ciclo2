@@ -33,8 +33,8 @@ public class ClaseArray2 {
 
     public void mostrarArray(int array[]) {
         for (int i = 0; i < array.length; i++) {
-            System.out.println("En el índice"+i+" tenemos el valor"+String.valueOf(array[i]));
-        
-        }
+            System.out.println("En el índice" + i + " tenemos el valor" + String.valueOf(array[i]));
 
-   }}
+        }
+    }
+}
