@@ -16,6 +16,14 @@ public class Exp {
         System.out.print(b || (d-e) >a/c);
         System.out.println(!b);
         System.out.println(!b && c < d || a/d <= e);
+        //"casting" "paceo"
+        String f = String.valueOf(a);
+        char assci_A='A';
+        int h =Character.valueOf(assci_A);
+        System.out.println(h);
+        System.out.println("El valor de h es:"+h);
+        System.out.println("El valor de h como char es:"+assci_A);
+         
 
         
     }

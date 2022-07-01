@@ -33,6 +33,6 @@ inscritos.remove(1);
 //Obtenemos el nombre del primer inscrito
 System.out.println(inscritos.get(0).getNombres());
 //Obtenemos el promedio del tercer inscrito
-System.out.println(inscritos.get(2).getPromedio());
+System.out.println("El promedio es:"+ inscritos.get(2).getPromedio());
     }
 }

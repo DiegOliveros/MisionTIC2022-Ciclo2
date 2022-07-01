@@ -23,5 +23,15 @@ public class Estudiante {
         String nombres = "El nombre es: " + this.Nombre + " y el apellido:" + this.Apellido;
         return nombres;
     }
-    
+
+    public float getPromedio() {
+        float sumatoria = 0;
+        int longitud = this.notas.length;
+        for (int i = 0; i < longitud; i++) {
+            sumatoria += this.notas[i];// sumatoria=sumatoria+this.notas[i];
+        }
+//        sumatoria /= longitud; //   sumatoria= sumatoria/ longitud;
+//        return sumatoria;
+        return sumatoria / longitud;
+    }
 }
