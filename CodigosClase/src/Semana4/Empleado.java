@@ -8,9 +8,9 @@ package Semana4;
 public class Empleado {
 //atributos del empleado
 
-    private String Nombreprivado = "nombrepordefeto";
-    public String Nombrepublico = "nombrepordefeto";
-    protected String Nombreprotegido = "nombrepordefeto";
+    private String Nombreprivado = "nombrepordefetoprivado";   //evita que los deje nulos 
+    public String Nombrepublico = "nombrepordefetopublico";
+    protected String Nombreprotegido = "nombrepordefetoprotegido";
     /**
      * @return the Nombreprivado
      */
@@ -27,17 +27,18 @@ public class Empleado {
 
 
     //el método constructor de la clase
-    public void Empleado(String Nombreprivadox, String Nombrepublicox, String Nombreprotegidox) {
+    // no tiene esta parte del código #### public void 
+    Empleado(String Nombreprivadox, String Nombrepublicox, String Nombreprotegidox) {
         this.setNombreprivado(Nombreprivadox);
         this.Nombrepublico = Nombrepublicox;
         this.Nombreprotegido = Nombreprotegidox;
     }
     //usando polimorfismo puedo tener otro constructor
 
-    public void Empleado() {
+    Empleado() {
     }  //constructor vacío --permite crear empleados sin parámetros
 
-    public void Empleado(String Nombreprivadox) {//constructor con un solo parámetros
+    Empleado(String Nombreprivadox) {//constructor con un solo parámetros
         this.setNombreprivado(Nombreprivadox);
     }
 
@@ -47,4 +48,10 @@ public class Empleado {
         this.Nombreprotegido = Nombreprotegidox;
     }
 
+    public void imprimirnombre(Empleado objeto, String nombreobjeto){
+    System.out.println("El nombre público de: "+nombreobjeto+" es: "+objeto.Nombrepublico);
+    System.out.println("El nombre privado de: "+nombreobjeto+" es: "+objeto.getNombreprivado());
+    System.out.println("El nombre privado de: "+nombreobjeto+" es: "+objeto.Nombreprotegido);
+   
+    }
 }
