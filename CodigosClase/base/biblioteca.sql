@@ -11,3 +11,7 @@ INSERT INTO `biblioteca`.`biblioteca` (`idbiblioteca`, `nombre`, `direccion`)
 VALUES ('4', 'Julio Barco', 'Bogotá');
 
 DELETE FROM `biblioteca`.`biblioteca` WHERE (`idbiblioteca` != '0');
+
+ALTER TABLE `biblioteca`.`biblioteca` 
+ADD COLUMN `codigo` INT NULL AFTER `direccion`;
+
