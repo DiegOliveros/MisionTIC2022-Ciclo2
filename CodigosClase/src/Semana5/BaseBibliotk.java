@@ -12,7 +12,7 @@ public class BaseBibliotk {
 
 private String url="jdbc:mysql://127.0.0.1:3306/biblioteca";
 private String user="JAVA";
-private String pass="JAVAadmin2022**_";
+private String pass="JAVAadmin2022";
 
 public Connection coneccion() throws ClassNotFoundException, SQLException{
     Class.forName("com.mysql.cj.jdbc.Driver");
