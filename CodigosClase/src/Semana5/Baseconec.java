@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package bases;
+package Semana5;
 
 /**
  * @scalapp.co ITOS 12/07/2022
@@ -12,19 +12,19 @@ package bases;
  */
 import java.sql.*;
 
-public class PruebaBaseDatos1 {
+public class Baseconec {
     private String Url="jdbc:mysql://127.0.0.1:3306/mydb";
-    private String User="JAVA";
-    private String Pass="JAVAadmin2022**_";
+    private String User="root";
+    private String Pass="qwertyA12345*";
     
     public Connection coneccion() throws ClassNotFoundException, SQLException{
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");//https://dev.mysql.com/downloads/windows/installer/8.0.html
             Connection conexion = DriverManager.getConnection(Url, User, Pass);
             return conexion;
     } 
 
     public static void main(String[] args) {
-        PruebaBaseDatos1 b = new PruebaBaseDatos1();
+        Baseconec b = new Baseconec();
         b.leer();
         b.insertar();
     }
@@ -33,7 +33,7 @@ public class PruebaBaseDatos1 {
             int idfactura, cantidad, Persona_idpersona;
             String fecha, fecha2, Producto_idProducto;
             String sentencia = "SELECT * FROM factura;";
-            PruebaBaseDatos1 b = new PruebaBaseDatos1();
+            Baseconec b = new Baseconec();
             Connection conexion=b.coneccion();
             Statement consulta = conexion.createStatement();
             ResultSet resultados = consulta.executeQuery(sentencia);
