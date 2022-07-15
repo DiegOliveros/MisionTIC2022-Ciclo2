@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package Semana5;
+package bases;
 
 /**
  * @scalapp.co ITOS 12/07/2022
