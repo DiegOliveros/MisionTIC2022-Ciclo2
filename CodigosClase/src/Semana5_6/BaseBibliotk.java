@@ -1,4 +1,4 @@
-package Semana5;
+package Semana5_6;
 
 import java.math.BigInteger;
 import java.security.NoSuchAlgorithmException;
@@ -26,12 +26,12 @@ public class BaseBibliotk {
     public static void main(String args[]) {
         BaseBibliotk conectorBaseBibliotk = new BaseBibliotk();
 //        conectorBaseBibliotk.insertar();
-//        conectorBaseBibliotk.leer();
+//        
         String clave = "123*";
         System.out.println(conectorBaseBibliotk.md5(clave));
         System.out.println(conectorBaseBibliotk.SHA1(clave));
-        conectorBaseBibliotk.insertar(9, "usuarioencriptado", "123*");
-
+        conectorBaseBibliotk.insertar(13, "usuarioencriptado", "123*");
+        conectorBaseBibliotk.leer();
     }
 
     public void leer() {

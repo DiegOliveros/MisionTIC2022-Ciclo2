@@ -1,5 +1,5 @@
 
-package Semana5;
+package Semana5_6;
 
 /**
  * Diego Iván Oliveros Acosta
