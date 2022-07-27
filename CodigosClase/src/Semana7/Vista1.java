@@ -31,6 +31,7 @@ public class Vista1 extends javax.swing.JFrame {
         jCheckBox1 = new javax.swing.JCheckBox();
         jTextField1 = new javax.swing.JTextField();
         jPasswordField1 = new javax.swing.JPasswordField();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,9 +83,11 @@ public class Vista1 extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(46, 46, 46)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPasswordField1)
-                            .addComponent(jTextField1))
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jPasswordField1)
+                                .addComponent(jTextField1)))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -100,9 +103,11 @@ public class Vista1 extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addComponent(jCheckBox1)
-                .addGap(28, 28, 28)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         pack();
@@ -110,17 +115,33 @@ public class Vista1 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Persona Usuario = new Persona(jTextField1.getText(),jPasswordField1.getText());
+        Control c = new Control();
+        String pass = c.cifrar(jPasswordField1.getText());
+        Persona Usuario = new Persona(jTextField1.getText(), pass);
+
+        int aceptado = c.validar(Usuario);
+        if (aceptado == 1) {
+            //mostrar vista 2
+            jLabel3.setText("Pasar a vista 2");
+            Vista2 bibliotk =new Vista2();
+            bibliotk.setVisible(true);
+            
+        } else {
+            //mostrar mensaje de error
+            jLabel3.setText("Revisar usuario y contraseña");
+        }
+
+//si usuario y contraseña son válidos => mostrar vista dos, si no, mostrar mensaje de error.
         System.out.println(Arrays.toString(Usuario.getusuariocontraseña()));
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
-        if(jCheckBox1.isSelected()){
+        if (jCheckBox1.isSelected()) {
             System.out.println("hola estoy seleccionado");
             jPasswordField1.setEchoChar('\0');
-        }else {
-        jPasswordField1.setEchoChar('*');
+        } else {
+            jPasswordField1.setEchoChar('*');
         }
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
@@ -173,6 +194,7 @@ public class Vista1 extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables

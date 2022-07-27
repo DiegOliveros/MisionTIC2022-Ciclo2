@@ -24,6 +24,54 @@ public class Modelo {
         return conexion;
     }
 
+    
+    public int validar(String usuario, String pass){
+        //select * from usuario where nombre="Juan" and password="123*"
+         int id = -1;
+        try {
+            Modelo bc = new Modelo();
+            Connection conexion = bc.coneccion();
+            String sentencia = "select * from usuario where nombre=\""+usuario+"\" and password=\""+pass+"\"";
+            Statement consulta = conexion.createStatement();
+            ResultSet resultados = consulta.executeQuery(sentencia);
+
+            while (resultados.next()) {
+                id = resultados.getInt("idusuario");
+            }
+            conexion.close();
+
+        } catch (ClassNotFoundException e) {
+            System.out.println("No fue posible cargar el driver" + e.getMessage());
+        } catch (SQLException sql) {
+            System.out.println("hubo un error en la consulta a la base: " + sql.getMessage());
+        }
+        if (id!=-1){
+          return 1;
+        }
+        return 0;
+    }
+    
+    public int readLastID() {
+        int id = 0;
+        try {
+            Modelo bc = new Modelo();
+            Connection conexion = bc.coneccion();
+            String sentencia = "SELECT max(idusuario) as id FROM usuario;";
+            Statement consulta = conexion.createStatement();
+            ResultSet resultados = consulta.executeQuery(sentencia);
+
+            while (resultados.next()) {
+                id = resultados.getInt("id");
+            }
+            conexion.close();
+
+        } catch (ClassNotFoundException e) {
+            System.out.println("No fue posible cargar el driver" + e.getMessage());
+        } catch (SQLException sql) {
+            System.out.println("hubo un error en la consulta a la base: " + sql.getMessage());
+        }
+        return id;
+    }
 
     public void leer() {
         try {
@@ -58,7 +106,7 @@ public class Modelo {
         try {
             Modelo bc = new Modelo();
             Connection conexion = bc.coneccion();
-            password=md5(password);
+            password = md5(password);
 //            int idusuariojv = 7;
 //            String nombre = "Lucia 7";
 //            String password = "1";
@@ -76,7 +124,7 @@ public class Modelo {
 
     }
 
-    public static String  getHash(String txt, String tipohash) {
+    public static String getHash(String txt, String tipohash) {
         try {
             java.security.MessageDigest md = java.security.MessageDigest.getInstance(tipohash);
             byte[] arreglo = md.digest(txt.getBytes());
@@ -88,8 +136,8 @@ public class Modelo {
 //            }
             BigInteger no = new BigInteger(1, arreglo);
             String hashtext = no.toString(16);
-            while (hashtext.length()<40) {
-                    hashtext ="0"+hashtext;            
+            while (hashtext.length() < 40) {
+                hashtext = "0" + hashtext;
             }
             return hashtext;
         } catch (NoSuchAlgorithmException ex) {

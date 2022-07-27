@@ -1,7 +1,7 @@
 package Semana7;
 
 import Semana4.*;
-import java.util.Arrays;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class Vista2 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Biblioteca
+     * Creates new form Biblioteca2
      */
     public Vista2() {
         initComponents();
@@ -25,43 +25,94 @@ public class Vista2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tablalibros = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jTextFieldTitulo = new javax.swing.JTextField();
+        jTextFieldcodigo = new javax.swing.JTextField();
+        jTextFieldautor = new javax.swing.JTextField();
+        jTextFieldanio = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jTextFieldID = new javax.swing.JTextField();
+        jButtonBuscar = new javax.swing.JButton();
+        jButtonModificar = new javax.swing.JButton();
+        jButtonEliminar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Usuario");
+        tablalibros.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
 
-        jButton1.setText("Ingresar");
+            },
+            new String [] {
+                "ID", "TITULO", "CODIGO", "AUTOR", "AÑO"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tablalibros);
+
+        jLabel1.setText("Titulo");
+
+        jLabel2.setText("Código");
+
+        jLabel3.setText("Autor");
+
+        jLabel4.setText("Año");
+
+        jButton1.setText("Agregar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Contraseña");
-
-        jCheckBox1.setText("Mostrar contraseña");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldTitulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                jTextFieldTituloActionPerformed(evt);
             }
         });
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldautor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jTextFieldautorActionPerformed(evt);
             }
         });
 
-        jPasswordField1.setActionCommand("<Not Set>");
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        jLabel5.setText("Buscar Libro");
+
+        jLabel6.setText("Ingrese ID:");
+
+        jButtonBuscar.setText("Buscar");
+        jButtonBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                jButtonBuscarActionPerformed(evt);
+            }
+        });
+
+        jButtonModificar.setText("Modificar");
+        jButtonModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonModificarActionPerformed(evt);
+            }
+        });
+
+        jButtonEliminar.setText("Eliminar");
+        jButtonEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEliminarActionPerformed(evt);
             }
         });
 
@@ -70,67 +121,157 @@ public class Vista2 extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addComponent(jButton1)
-                        .addContainerGap(149, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldID, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonBuscar))
+                            .addComponent(jLabel5)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButtonModificar)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonEliminar))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPasswordField1)
-                            .addComponent(jTextField1))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel2)
+                                        .addComponent(jLabel3)
+                                        .addComponent(jLabel4))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jTextFieldautor)
+                                        .addComponent(jTextFieldcodigo)
+                                        .addComponent(jTextFieldanio, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(54, 54, 54)
+                                .addComponent(jButton1)))))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 659, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(51, 51, 51)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jTextFieldcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jTextFieldautor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jTextFieldanio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jTextFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonBuscar))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
-                .addComponent(jCheckBox1)
-                .addGap(28, 28, 28)
-                .addComponent(jButton1)
-                .addContainerGap(99, Short.MAX_VALUE))
+                    .addComponent(jButtonModificar)
+                    .addComponent(jButtonEliminar))
+                .addGap(12, 12, 12))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jTextFieldTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTituloActionPerformed
         // TODO add your handling code here:
-        Persona Usuario = new Persona(jTextField1.getText(),jPasswordField1.getText());
-        System.out.println(Arrays.toString(Usuario.getusuariocontraseña()));
+    }//GEN-LAST:event_jTextFieldTituloActionPerformed
+
+    private void jTextFieldautorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldautorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldautorActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        DefaultTableModel modelo = (DefaultTableModel) tablalibros.getModel(); // Integer Nombre;
+        //optener información de la tabla:
+        System.out.println("getRowCount" + modelo.getRowCount()); // numero de filas
+        if (modelo.getRowCount() != 0) {
+            System.out.println("getValueAt(0,1)" + modelo.getValueAt(0, 1)); //valor en fila 1 columna 2
+        }
+        if (modelo.getRowCount() != 0) //modelo.getDataVector()!=null
+        {
+            System.out.println("getDataVector" + modelo.getDataVector());  //matriz
+        }    //modificar elementos de la tabla:
+        // String[] fila={"002", "Java programing interfaces","AB585","El autor","2000"}; //vector de strings
+        String id = String.valueOf(modelo.getRowCount());
+        String titulo = jTextFieldTitulo.getText();
+        String codigo = jTextFieldcodigo.getText();
+        String autor = jTextFieldautor.getText();
+        String anio = jTextFieldanio.getText();
+        String[] fila = {id, titulo, codigo, autor, anio};
+        System.out.println(fila);
+        modelo.addRow(fila);// añade el vector al modelo. 
+        jTextFieldTitulo.setText("");//elimina valores luego de ingresar el dato
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
-        if(jCheckBox1.isSelected()){
-            System.out.println("hola estoy seleccionado");
-            jPasswordField1.setEchoChar('\0');
-        }else {
-        jPasswordField1.setEchoChar('*');
-        }
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    private void jButtonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarActionPerformed
+        System.out.println(tablalibros.getSelectedRow());
+        DefaultTableModel model = (DefaultTableModel) tablalibros.getModel();
+        model.removeRow(tablalibros.getSelectedRow());
+    }//GEN-LAST:event_jButtonEliminarActionPerformed
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    private void jButtonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarActionPerformed
+        DefaultTableModel model = (DefaultTableModel) tablalibros.getModel();
+        String id = jTextFieldID.getText(); 
+     
+        if(tablalibros.getSelectedRow()!=-1)
+        id= String.valueOf(tablalibros.getSelectedRow());
+        
+        String titulo = jTextFieldTitulo.getText();
+        String codigo = jTextFieldcodigo.getText();
+        String autor = jTextFieldautor.getText();
+        String anio = jTextFieldanio.getText();
+        String[] fila = {id, titulo, codigo, autor, anio};
+        System.out.println(fila);
+        model.removeRow(Integer.valueOf(id));
+        model.insertRow(Integer.valueOf(id), fila);
+        
+    }//GEN-LAST:event_jButtonModificarActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarActionPerformed
+        //tomar el valor del ID
+        int ID = Integer.parseInt(jTextFieldID.getText());
+        //cargar los valores del ID
+        DefaultTableModel model = (DefaultTableModel) tablalibros.getModel();
+        jTextFieldTitulo.setText((String) model.getValueAt(ID, 1));
+        jTextFieldcodigo.setText((String) model.getValueAt(ID, 2));
+        jTextFieldautor.setText((String) model.getValueAt(ID, 3));
+        jTextFieldanio.setText((String) model.getValueAt(ID, 4));
+    }//GEN-LAST:event_jButtonBuscarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,10 +311,26 @@ public class Vista2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JButton jButtonBuscar;
+    private javax.swing.JButton jButtonEliminar;
+    private javax.swing.JButton jButtonModificar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTextField jTextFieldID;
+    private javax.swing.JTextField jTextFieldTitulo;
+    private javax.swing.JTextField jTextFieldanio;
+    private javax.swing.JTextField jTextFieldautor;
+    private javax.swing.JTextField jTextFieldcodigo;
+    private javax.swing.JTable tablalibros;
     // End of variables declaration//GEN-END:variables
+
+    private boolean getSelectedRow() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
