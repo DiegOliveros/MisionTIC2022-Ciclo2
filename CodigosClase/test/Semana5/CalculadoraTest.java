@@ -40,7 +40,7 @@ public class CalculadoraTest {
     public void testMain() {
         System.out.println("esta es la prueba main");
         String[] args = null;
-        Calculadora.main(args);
+       // Calculadora.main(args);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
     }
