@@ -86,8 +86,8 @@ public class Film implements Serializable {
     @JoinColumn(name = "original_language_id", referencedColumnName = "language_id")
     @ManyToOne
     private Language originalLanguageId;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "filmId")
-    private Collection<Inventory> inventoryCollection;
+    /*@OneToMany(cascade = CascadeType.ALL, mappedBy = "filmId")
+   / private Collection<Inventory> inventoryCollection;*/
 
     public Film() {
     }
@@ -225,13 +225,13 @@ public class Film implements Serializable {
         this.originalLanguageId = originalLanguageId;
     }
 
-    public Collection<Inventory> getInventoryCollection() {
+/*    public Collection<Inventory> getInventoryCollection() {
         return inventoryCollection;
     }
 
     public void setInventoryCollection(Collection<Inventory> inventoryCollection) {
         this.inventoryCollection = inventoryCollection;
-    }
+    }*/
 
     @Override
     public int hashCode() {
